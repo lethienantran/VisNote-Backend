@@ -1,6 +1,6 @@
-/** Initialize neccessary modules */
-const express = require("express");
-const cors = require("cors");
+/** Initialize necessary modules */
+import express from "express";
+import cors from "cors";
 
 /** Define the express app */
 const app = express();
@@ -12,11 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 /** Import routes */
+import AuthenticationRoutes from "../src/routes/AuthenticationRoutes.js";
 
 /** Define the port */
 const PORT = 5001;
 
 /** Use the routes (Middleware) */
+app.use("/api/authentication", AuthenticationRoutes);
 
 /** Start the server */
 app.listen(PORT, (err) => {
@@ -28,4 +30,4 @@ app.listen(PORT, (err) => {
 });
 
 /** Exports the app */
-module.exports = app;
+export default app;

@@ -1,8 +1,9 @@
 /** Don't make or push any changes on this configuration file, especially when you're change developing environment */
 
 /** Initialize Knex */
-const knex = require("knex");
-require("dotenv").config();
+import knex from "knex";
+import dotenv from "dotenv";
+dotenv.config();
 
 const config = {
   client: "mysql",
@@ -17,4 +18,4 @@ const config = {
 const db = knex(config);
 
 /** Export db object that already config */
-module.exports = db;
+export default db;

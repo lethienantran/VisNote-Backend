@@ -1,15 +1,14 @@
-/** Initialize neccessary modules */
-const ResponseBuilderServices = require("../services/response_builder/ResponseBuilder");
+/** Initialize necessary modules */
+import * as ResponseBuilderServices from "../services/response_builder/ResponseBuilder.js";
 
 /** Exports the modules */
-module.exports = {
-  BuildResponse: ResponseBuilderServices.BuildResponse,
-  CreateSuccessful: ResponseBuilderServices.CreateSuccessful,
-  UpdateSuccessful: ResponseBuilderServices.UpdateSuccessful,
-  DeleteSuccessful: ResponseBuilderServices.DeleteSuccessful,
-  GetSuccessful: ResponseBuilderServices.GetSuccessful,
-  MissingContent: ResponseBuilderServices.MissingContent,
-  NotFound: ResponseBuilderServices.NotFound,
-  ServerError: ResponseBuilderServices.ServerError,
-  BadRequest: ResponseBuilderServices.BadRequest,
-};
+export const BuildResponse = ResponseBuilderServices.BuildResponse;
+export const CreateSuccessful = ResponseBuilderServices.CreateSuccessful;
+export const UpdateSuccessful = ResponseBuilderServices.UpdateSuccessful;
+export const DeleteSuccessful = ResponseBuilderServices.DeleteSuccessful;
+export const GetSuccessful = ResponseBuilderServices.GetSuccessful;
+export const MissingContent = ResponseBuilderServices.MissingContent;
+export const NotFound = ResponseBuilderServices.NotFound;
+export const ServerError = ResponseBuilderServices.ServerError;
+export const BadRequest = ResponseBuilderServices.BadRequest;
+export const ValidationFailed = ResponseBuilderServices.ValidationFailed;

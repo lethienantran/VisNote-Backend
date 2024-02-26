@@ -1,4 +1,4 @@
-/** Initialize neccessary modules */
+/** Initialize necessary modules */
 
-/** Exports the modules */
-module.exports = {};
+/** Export module functions */
+export default {};

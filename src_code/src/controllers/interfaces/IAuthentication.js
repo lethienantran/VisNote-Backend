@@ -1,4 +1,5 @@
-/** Initialize neccessary modules */
+/** Initialize necessary modules */
+import * as SignUpServices from "../services/authentication/SignUp.js";
 
 /** Export module functions */
-module.exports = {};
+export const SignUp = SignUpServices.SignUp;
