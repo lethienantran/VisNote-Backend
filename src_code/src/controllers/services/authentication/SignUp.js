@@ -49,7 +49,7 @@ async function SignUp(response, body) {
     console.log("ERROR: There is an error while signing up:", error);
     return responseBuilder.ServerError(
       response,
-      "There is an error while signing up."
+      `There is an error while signing up.${error}`
     );
   }
 }
@@ -57,8 +57,10 @@ async function SignUp(response, body) {
 async function ValidateUsername(username, errors) {
   /** Validate username must be longer than 6 */
   if (username && typeof username === "string") {
-    if (username.length < 6) {
-      errors.push("Username must be longer than 6 characters.");
+    if (username.length < 6 || username.length > 50) {
+      errors.push(
+        "Username must be longer than 6 and less than 50 characters."
+      );
     }
 
     /** Validate if username not exists */
