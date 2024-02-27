@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node ./src_code/express_app/app.js"
   },
   "keywords": [],
@@ -20,5 +20,11 @@
     "knex": "^3.1.0",
     "mysql": "^2.18.1",
     "nodemailer": "^6.9.8"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }

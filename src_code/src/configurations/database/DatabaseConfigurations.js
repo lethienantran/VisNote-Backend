@@ -5,13 +5,23 @@ import knex from "knex";
 import dotenv from "dotenv";
 dotenv.config();
 
+let databaseName;
+
+if (process.env.NODE_ENV === "test") {
+  databaseName = process.env.DB_TEST_NAME;
+} else if (process.env.NODE_ENV === "production") {
+  databaseName = process.env.DB_PROD_NAME;
+} else {
+  databaseName = process.env.DB_DEV_NAME;
+}
+
 const config = {
   client: "mysql",
   connection: {
     host: process.env.DB_HOST_NAME,
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_DEV_NAME,
+    database: databaseName,
   },
 };
 

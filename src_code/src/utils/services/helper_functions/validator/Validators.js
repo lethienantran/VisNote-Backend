@@ -15,7 +15,7 @@ export function ValidateRequiredFields(
 
     if (
       !(field in body) ||
-      (typeof body === "string" && body[field].trim() === "")
+      (typeof body[field] === "string" && body[field].trim() === "")
     ) {
       errors.push(`${mappingFieldName} is required.`);
     }

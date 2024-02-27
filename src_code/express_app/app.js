@@ -21,7 +21,7 @@ const PORT = 5001;
 app.use("/api/authentication", AuthenticationRoutes);
 
 /** Start the server */
-app.listen(PORT, (err) => {
+const server = app.listen(PORT, (err) => {
   if (err) {
     console.error("ERROR STARTING SERVER DUE TO: ", err);
   } else {
@@ -30,4 +30,4 @@ app.listen(PORT, (err) => {
 });
 
 /** Exports the app */
-export default app;
+export default server;
