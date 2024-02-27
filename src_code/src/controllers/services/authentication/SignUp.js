@@ -43,7 +43,7 @@ async function SignUp(response, body) {
 
     await db("reviewer_account").insert(newAccountData);
 
-    return responseBuilder.CreateSuccessful(response, body, "Your accounts");
+    return responseBuilder.CreateSuccessful(response, body, "Your account");
   } catch (error) {
     /** Log error and return Server Error */
     console.log("ERROR: There is an error while signing up:", error);
